@@ -30,7 +30,7 @@ def q3
 
   # 以下に回答を記載
   # puts numbers.size
-  puts "配列numbersの個数は#{numbers.length}個です。"
+  puts "配列numbersの内３は#{numbers.count(3)}個です。"
 
 end
 
@@ -57,11 +57,8 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2 = []
-  numbers1.each do |number|
-    numbers2 << number * 10
-  end  
-
+  numbers2 = numbers1.map { |x| x * 10 }
+  
   p numbers2
 
 end
