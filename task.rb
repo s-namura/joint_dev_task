@@ -30,7 +30,7 @@ def q3
 
   # 以下に回答を記載
   # puts numbers.size
-  puts numbers.count
+  puts "配列numbersの個数は#{numbers.length}個です。"
 
 end
 
@@ -38,7 +38,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  sports = sports.compact
   # 以下は変更しないで下さい
   p sports
 end
@@ -48,13 +48,21 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  puts "array1: "+"#{array1.empty?}"
+  puts "array2: "+"#{array2.empty?}"
+  
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
+  numbers2 = []
+  numbers1.each do |number|
+    numbers2 << number * 10
+  end  
+
+  p numbers2
 
 end
 
