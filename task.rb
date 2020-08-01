@@ -182,9 +182,11 @@ class UserQ17
     @gender = params[:gender]
   end
   def info
-    puts "名前　：#{@name}"
-    puts "年齢　：#{@age}"
-    puts "性別　：#{@gender}"
+    puts <<~EOS
+    名前　：#{@name}
+    年齢　：#{@age}
+    性別　：#{@gender}
+    EOS
   end
 
 end
