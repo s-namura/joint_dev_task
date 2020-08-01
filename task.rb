@@ -176,10 +176,10 @@ end
 class UserQ17
   # 以下に回答を記載
 
-  def initialize(name:, age:, gender:)
-    @name = name
-    @age = age
-    @gender = gender
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
   end
   def info
     puts "名前　：#{@name}"
@@ -207,9 +207,9 @@ class UserQ18
   end
   def introduce
     if @age >= 20
-      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     else
-      puts "はいさいまいど〜，#{@name}です！！！"
+      "はいさいまいど〜，#{@name}です！！！"
     end  
   end
 
