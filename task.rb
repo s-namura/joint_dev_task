@@ -245,12 +245,38 @@ end
 
 class UserQ20
   # 以下に回答を記載
-
+  attr_reader :name, :age
+  def initialize(**params)
+    @name = params[:name]
+    @age  = params[:age]
+  end
 end
 
 class Zoo
   # 以下に回答を記載
-
+  def initialize(**params)
+    @zoo_name = params[:name]
+    @infant = params[:entry_fee][:infant]
+    @children = params[:entry_fee][:children]
+    @adult = params[:entry_fee][:adult]
+    @senior = params[:entry_fee][:senior]
+  end
+  
+  def info_entry_fee(user)
+    @name = user.name
+    @age = user.age
+    case @age
+      when 0..5
+        info_entry_fee = @infant
+      when 6..12
+        info_entry_fee = @children
+      when 13..64
+        info_entry_fee = @adult
+      when 65..120
+        info_entry_fee = @senior
+    end
+    puts "#{@name}さんは#{info_entry_fee}円です"
+  end
 end
 
 
